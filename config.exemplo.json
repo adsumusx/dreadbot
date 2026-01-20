@@ -1,0 +1,14 @@
+{
+  "_comment": "Exemplo de configuração - copie para config.json e ajuste conforme necessário",
+  "quality": [5, 6],
+  "min_level": 24,
+  "max_level": null,
+  "min_price": null,
+  "max_price": 100000,
+  "stats": ["STR", "INT", "COU"],
+  "slots": ["chest", "hands"],
+  "check_interval": 30,
+  "alert_method": "both",
+  "log_file": "alerts.log"
+}
+

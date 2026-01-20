@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+  <head>
+      <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-6MP03ZJKB9"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6MP03ZJKB9');
+      </script>
+
+
+    <title>DreadmystDB - Trade</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Player trading marketplace for Dreadmyst Online. Buy and sell items with other players.">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#0a0a0c">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://dreadmystdb.com/trade">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="DreadmystDB">
+    <meta property="og:title" content="DreadmystDB - Trade">
+    <meta property="og:description" content="Player trading marketplace for Dreadmyst Online. Buy and sell items with other players.">
+    <meta property="og:image" content="https://dreadmystdb.com/og-image.png">
+    <meta property="og:url" content="https://dreadmystdb.com/trade">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DreadmystDB - Trade">
+    <meta name="twitter:description" content="Player trading marketplace for Dreadmyst Online. Buy and sell items with other players.">
+    <meta name="twitter:image" content="https://dreadmystdb.com/og-image.png">
+
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="OxsJRLKm_kYX6uMEoVge6uLlcxzXQRhistPfGMeAXctDNzOhozwBHwOfTBlDPbVG0AD4T45g4zmaYRCEvg4Gxg" />
+    
+
+    
+
+    <link rel="icon" href="/icon.png" type="image/png">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+
+    <link rel="stylesheet" href="/assets/application-b614ade8.css" data-turbo-track="reload" />
+<link rel="stylesheet" href="/assets/tailwind-17ba6577.css" data-turbo-track="reload" />
+    <script type="importmap" data-turbo-track="reload">{
+  "imports": {
+    "application": "/assets/application-bfcdf840.js",
+    "@hotwired/turbo-rails": "/assets/turbo.min-ad2c7b86.js",
+    "@hotwired/stimulus": "/assets/stimulus.min-4b1e420e.js",
+    "@hotwired/stimulus-loading": "/assets/stimulus-loading-1fc53fe7.js",
+    "controllers/affix_calculator_controller": "/assets/controllers/affix_calculator_controller-cb9260fe.js",
+    "controllers/application": "/assets/controllers/application-3affb389.js",
+    "controllers/autocomplete_controller": "/assets/controllers/autocomplete_controller-b2d853c3.js",
+    "controllers/clipboard_controller": "/assets/controllers/clipboard_controller-4b9f0a4c.js",
+    "controllers/collapsible_controller": "/assets/controllers/collapsible_controller-972b8085.js",
+    "controllers/countdown_controller": "/assets/controllers/countdown_controller-f4d4d92c.js",
+    "controllers/dropdown_controller": "/assets/controllers/dropdown_controller-d67bd046.js",
+    "controllers/flash_controller": "/assets/controllers/flash_controller-b17f70d8.js",
+    "controllers/hello_controller": "/assets/controllers/hello_controller-708796bd.js",
+    "controllers": "/assets/controllers/index-ee64e1f1.js",
+    "controllers/inline_edit_controller": "/assets/controllers/inline_edit_controller-885a5bb2.js",
+    "controllers/live_listings_controller": "/assets/controllers/live_listings_controller-6f3c11a8.js",
+    "controllers/mobile_menu_controller": "/assets/controllers/mobile_menu_controller-691e5cc6.js",
+    "controllers/spell_calculator_controller": "/assets/controllers/spell_calculator_controller-07c518b4.js",
+    "controllers/trade_autocomplete_controller": "/assets/controllers/trade_autocomplete_controller-bde36fd6.js",
+    "controllers/trade_refresh_controller": "/assets/controllers/trade_refresh_controller-dd99c926.js"
+  }
+}</script>
+<link rel="modulepreload" href="/assets/application-bfcdf840.js">
+<link rel="modulepreload" href="/assets/turbo.min-ad2c7b86.js">
+<link rel="modulepreload" href="/assets/stimulus.min-4b1e420e.js">
+<link rel="modulepreload" href="/assets/stimulus-loading-1fc53fe7.js">
+<link rel="modulepreload" href="/assets/controllers/affix_calculator_controller-cb9260fe.js">
+<link rel="modulepreload" href="/assets/controllers/application-3affb389.js">
+<link rel="modulepreload" href="/assets/controllers/autocomplete_controller-b2d853c3.js">
+<link rel="modulepreload" href="/assets/controllers/clipboard_controller-4b9f0a4c.js">
+<link rel="modulepreload" href="/assets/controllers/collapsible_controller-972b8085.js">
+<link rel="modulepreload" href="/assets/controllers/countdown_controller-f4d4d92c.js">
+<link rel="modulepreload" href="/assets/controllers/dropdown_controller-d67bd046.js">
+<link rel="modulepreload" href="/assets/controllers/flash_controller-b17f70d8.js">
+<link rel="modulepreload" href="/assets/controllers/hello_controller-708796bd.js">
+<link rel="modulepreload" href="/assets/controllers/index-ee64e1f1.js">
+<link rel="modulepreload" href="/assets/controllers/inline_edit_controller-885a5bb2.js">
+<link rel="modulepreload" href="/assets/controllers/live_listings_controller-6f3c11a8.js">
+<link rel="modulepreload" href="/assets/controllers/mobile_menu_controller-691e5cc6.js">
+<link rel="modulepreload" href="/assets/controllers/spell_calculator_controller-07c518b4.js">
+<link rel="modulepreload" href="/assets/controllers/trade_autocomplete_controller-bde36fd6.js">
+<link rel="modulepreload" href="/assets/controllers/trade_refresh_controller-dd99c926.js">
+<script type="module">import "application"</script>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "DreadmystDB",
+      "url": "https://dreadmystdb.com",
+      "description": "DreadmystDB - The comprehensive database for Dreadmyst Online. Find items, NPCs, spells, quests, and more.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://dreadmystdb.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    
+  </head>
+
+  <body class="min-h-full flex flex-col">
+    <header class="bg-dark-surface border-b border-dark-border sticky top-0 z-50">
+  <nav class="mx-auto px-6 lg:px-10" style="max-width: 1750px;" data-controller="mobile-menu">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <a class="flex items-center gap-2 text-gold hover:text-gold-light" href="/">
+        <span class="font-cinzel text-xl font-bold">DreadmystDB</span>
+</a>
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center gap-1">
+        <a class="nav-link" href="/database/items">Items</a>
+        <a class="nav-link" href="/database/npcs">NPCs</a>
+        <a class="nav-link" href="/database/spells">Spells</a>
+        <a class="nav-link" href="/database/quests">Quests</a>
+        <a class="nav-link" href="/database/dungeons">Dungeons</a>
+        <a class="nav-link" href="/database/affixes">Affixes</a>
+        <a class="nav-link" href="/database/guides">Guides</a>
+        <span class="nav-link text-text-muted cursor-not-allowed flex items-center gap-2">
+          Builds
+          <span class="text-[10px] bg-dark-bg rounded px-2 py-1 leading-none uppercase tracking-wide" style="color: rgba(212, 169, 64, 0.6); border: 1px solid rgba(212, 169, 64, 0.2);">Soon</span>
+        </span>
+        <a class="ml-3 mr-4 px-4 py-1.5 bg-gold hover:bg-gold-light text-dark-bg text-sm font-semibold rounded flex items-center gap-1.5 transition-colors" href="/trade">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+          Trade
+</a>      </div>
+
+      <!-- Search and Auth -->
+      <div class="flex items-center gap-4">
+        <!-- Search with Autocomplete -->
+        <div class="hidden sm:block" data-controller="autocomplete">
+          <form action="/search" accept-charset="UTF-8" method="get">
+            <div class="relative">
+              <input placeholder="Search..." class="input-field w-48 lg:w-64 pl-10 py-1.5 text-sm" value="" autocomplete="off" data-autocomplete-target="input" data-action="input-&gt;autocomplete#search keydown-&gt;autocomplete#onKeydown blur-&gt;autocomplete#onBlur" type="text" name="q" id="q" />
+              <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+              </svg>
+              <!-- Autocomplete dropdown -->
+              <div data-autocomplete-target="results"
+                   class="absolute top-full left-0 mt-1 rounded-lg overflow-hidden"
+                   style="display: none; background: #1a1a1f; border: 1px solid #2a2a2f; box-shadow: 0 10px 40px rgba(0,0,0,0.5); z-index: 9999;"></div>
+            </div>
+</form>        </div>
+
+        <!-- Auth Links -->
+          <div class="flex items-center gap-2">
+            <a class="flex items-center gap-2 px-3 py-1.5 rounded hover:bg-dark-hover transition-colors" href="/profile">
+              <div class="w-7 h-7 rounded-full flex items-center justify-center" style="background: rgba(212, 169, 64, 0.2); color: #d4a940;">
+                <span class="text-sm font-semibold">A</span>
+              </div>
+              <span class="text-text-secondary text-sm hidden sm:inline">adsumus</span>
+</a>            <form class="button_to" method="post" action="/session"><input type="hidden" name="_method" value="delete" autocomplete="off" /><button class="btn-secondary text-sm py-1.5 px-3" type="submit">Log Out</button><input type="hidden" name="authenticity_token" value="j3s2r6KavbLmYISxEk592w1D8CLGSM3yXW2mh7SczAgCYyBZna7ZZqpeCh0xsa2dqhnazwAolDlLe5g8qFKh4A" autocomplete="off" /></form>
+          </div>
+
+        <!-- Mobile menu button -->
+        <button data-action="click->mobile-menu#toggle" class="md:hidden p-2 text-text-secondary hover:text-gold">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div data-mobile-menu-target="menu" class="hidden md:hidden pb-4">
+      <div class="flex flex-col gap-2">
+        <a class="nav-link block" href="/database/items">Items</a>
+        <a class="nav-link block" href="/database/npcs">NPCs</a>
+        <a class="nav-link block" href="/database/spells">Spells</a>
+        <a class="nav-link block" href="/database/quests">Quests</a>
+        <a class="nav-link block" href="/database/dungeons">Dungeons</a>
+        <a class="nav-link block" href="/database/affixes">Affixes</a>
+        <a class="nav-link block" href="/database/guides">Guides</a>
+        <span class="nav-link block text-text-muted cursor-not-allowed flex items-center gap-2">
+          Builds
+          <span class="text-[10px] bg-dark-bg rounded px-2 py-1 leading-none uppercase tracking-wide" style="color: rgba(212, 169, 64, 0.6); border: 1px solid rgba(212, 169, 64, 0.2);">Soon</span>
+        </span>
+        <a class="mt-3 px-4 py-2 bg-gold hover:bg-gold-light text-dark-bg font-semibold rounded flex items-center justify-center gap-2 transition-colors" href="/trade">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+          Trade
+</a>        <hr class="border-dark-border my-3">
+        <div data-controller="autocomplete">
+          <form action="/search" accept-charset="UTF-8" method="get">
+            <div class="relative">
+              <input placeholder="Search..." class="input-field w-full" value="" autocomplete="off" data-autocomplete-target="input" data-action="input-&gt;autocomplete#search keydown-&gt;autocomplete#onKeydown blur-&gt;autocomplete#onBlur" type="text" name="q" id="q" />
+              <div data-autocomplete-target="results"
+                   class="absolute top-full left-0 right-0 mt-1 rounded-lg overflow-hidden"
+                   style="display: none; background: #1a1a1f; border: 1px solid #2a2a2f; box-shadow: 0 10px 40px rgba(0,0,0,0.5); z-index: 9999;"></div>
+            </div>
+</form>        </div>
+        <hr class="border-dark-border my-2">
+          <div class="flex items-center justify-between">
+            <a class="flex items-center gap-2" href="/profile">
+              <div class="w-6 h-6 rounded-full flex items-center justify-center" style="background: rgba(212, 169, 64, 0.2); color: #d4a940;">
+                <span class="text-xs font-semibold">A</span>
+              </div>
+              <span class="text-text-secondary text-sm">adsumus</span>
+</a>            <form class="button_to" method="post" action="/session"><input type="hidden" name="_method" value="delete" autocomplete="off" /><button class="btn-secondary text-sm py-1.5 px-3" type="submit">Log Out</button><input type="hidden" name="authenticity_token" value="Ra5ZYTxJJqbM0uczrM9ltsudC02euT1Jc5-W_DJLTfnItk-XA31CcoDsaZ-PMLXwbMchoFjZZIJliahHLoUgEQ" autocomplete="off" /></form>
+          </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+    
+
+    <main class="flex-1 container mx-auto px-4 py-8 max-w-7xl">
+      
+<div class="flex flex-col lg:flex-row gap-8"
+     data-controller="trade-refresh"
+     data-trade-refresh-latest-id-value="13158"
+     data-trade-refresh-interval-value="15000">
+  <!-- Filters Sidebar -->
+  <aside class="lg:w-64 flex-shrink-0 relative z-10">
+    <div class="card p-4 sticky top-20">
+      <h2 class="font-cinzel text-lg text-gold mb-4">Filters</h2>
+
+      <form data-turbo-frame="_top" action="/trade" accept-charset="UTF-8" method="get">
+        <div class="mb-4">
+          <label class="block text-text-secondary text-sm mb-1">Search Item</label>
+          <input value="" class="input-field w-full" placeholder="Item name..." type="text" name="q" id="q" />
+        </div>
+
+        <div class="mb-4" data-controller="collapsible" data-collapsible-key-value="trade-quality">
+          <button type="button" class="flex items-center justify-between w-full cursor-pointer mb-2" data-action="click->collapsible#toggle">
+            <span class="text-text-secondary text-sm">Quality</span>
+            <svg data-collapsible-target="icon" class="collapsible-icon w-4 h-4 text-text-muted flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div data-collapsible-target="content" class="collapsible-content">
+            <div class="stat-filter-box flex flex-col gap-1 p-2 bg-dark-surface rounded border border-dark-border">
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="quality[]" value="1"
+                         >
+                  <span class="text-xs quality-poor opacity-60">
+                    Junk
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="quality[]" value="2"
+                         >
+                  <span class="text-xs quality-common opacity-60">
+                    Normal
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="quality[]" value="3"
+                         >
+                  <span class="text-xs quality-uncommon opacity-60">
+                    Radiant
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="quality[]" value="4"
+                         >
+                  <span class="text-xs quality-rare opacity-60">
+                    Blessed
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="quality[]" value="5"
+                         checked>
+                  <span class="text-xs quality-epic ">
+                    Holy
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="quality[]" value="6"
+                         checked>
+                  <span class="text-xs quality-legendary ">
+                    Godly
+                  </span>
+                </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-4" data-controller="collapsible" data-collapsible-key-value="trade-level">
+          <button type="button" class="flex items-center justify-between w-full cursor-pointer mb-2" data-action="click->collapsible#toggle">
+            <span class="text-text-secondary text-sm">Item Level</span>
+            <svg data-collapsible-target="icon" class="collapsible-icon w-4 h-4 text-text-muted flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div data-collapsible-target="content" class="collapsible-content">
+            <div class="flex gap-2">
+              <input value="24" class="input-field w-full text-sm" placeholder="Min" min="1" max="25" type="number" name="min_level" id="min_level" />
+              <input value="" class="input-field w-full text-sm" placeholder="Max" min="1" max="25" type="number" name="max_level" id="max_level" />
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-4" data-controller="collapsible" data-collapsible-key-value="trade-stats">
+          <button type="button" class="flex items-center justify-between w-full cursor-pointer mb-2" data-action="click->collapsible#toggle">
+            <span class="flex items-center gap-2">
+              <span class="text-text-secondary text-sm">Filter by Stats</span>
+            </span>
+            <svg data-collapsible-target="icon" class="collapsible-icon w-4 h-4 text-text-muted flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div data-collapsible-target="content" class="collapsible-content">
+            <p class="text-xs text-text-muted mb-2">Only shows generated items with selected stats</p>
+            <div class="stat-filter-box flex flex-col gap-1 p-2 bg-dark-surface rounded border border-dark-border">
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="stats[]" value="5"
+                         >
+                  <span class="text-xs text-text-muted">
+                    Agility
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="stats[]" value="3"
+                         >
+                  <span class="text-xs text-text-muted">
+                    Armor Value
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="stats[]" value="30"
+                         >
+                  <span class="text-xs text-text-muted">
+                    Axes
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="stats[]" value="19"
+                         >
+                  <span class="text-xs text-text-muted">
+                    Block Rating
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="stats[]" value="8"
+                         >
+                  <span class="text-xs text-text-muted">
+                    Courage
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="stats[]" value="33"
+                         >
+                  <span class="text-xs text-text-muted">
+                    Daggers
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="stats[]" value="18"
+                         >
+                  <span class="text-xs text-text-muted">
+                    Dodge Rating
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="stats[]" value="2"
+                         >
+                  <span class="text-xs text-text-muted">
+                    Health
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="stats[]" value="7"
+                         >
+                  <span class="text-xs text-text-muted">
+                    Intelligence
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="stats[]" value="29"
+                         >
+                  <span class="text-xs text-text-muted">
+                    Maces
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="stats[]" value="1"
+                         >
+                  <span class="text-xs text-text-muted">
+                    Mana
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="stats[]" value="10"
+                         >
+                  <span class="text-xs text-text-muted">
+                    Meditate
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="stats[]" value="15"
+                         >
+                  <span class="text-xs text-text-muted">
+                    Melee Critical
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="stats[]" value="12"
+                         >
+                  <span class="text-xs text-text-muted">
+                    Melee Speed
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="stats[]" value="32"
+                         >
+                  <span class="text-xs text-text-muted">
+                    Ranged
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="stats[]" value="16"
+                         >
+                  <span class="text-xs text-text-muted">
+                    Ranged Critical
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="stats[]" value="14"
+                         >
+                  <span class="text-xs text-text-muted">
+                    Ranged Speed
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="stats[]" value="13"
+                         >
+                  <span class="text-xs text-text-muted">
+                    Ranged Weapon Value
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="stats[]" value="9"
+                         >
+                  <span class="text-xs text-text-muted">
+                    Regeneration
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="stats[]" value="22"
+                         >
+                  <span class="text-xs text-text-muted">
+                    Resist Fire
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="stats[]" value="21"
+                         >
+                  <span class="text-xs text-text-muted">
+                    Resist Frost
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="stats[]" value="24"
+                         >
+                  <span class="text-xs text-text-muted">
+                    Resist Holy
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="stats[]" value="23"
+                         >
+                  <span class="text-xs text-text-muted">
+                    Resist Shadow
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="stats[]" value="35"
+                         >
+                  <span class="text-xs text-text-muted">
+                    Shields
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="stats[]" value="17"
+                         >
+                  <span class="text-xs text-text-muted">
+                    Spell Critical
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="stats[]" value="28"
+                         >
+                  <span class="text-xs text-text-muted">
+                    Staves
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="stats[]" value="4"
+                         >
+                  <span class="text-xs text-text-muted">
+                    Strength
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="stats[]" value="31"
+                         >
+                  <span class="text-xs text-text-muted">
+                    Swords
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="stats[]" value="34"
+                         >
+                  <span class="text-xs text-text-muted">
+                    Wands
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="stats[]" value="11"
+                         >
+                  <span class="text-xs text-text-muted">
+                    Weapon Value
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="stats[]" value="6"
+                         >
+                  <span class="text-xs text-text-muted">
+                    Willpower
+                  </span>
+                </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-4" data-controller="collapsible" data-collapsible-key-value="trade-slot">
+          <button type="button" class="flex items-center justify-between w-full cursor-pointer mb-2" data-action="click->collapsible#toggle">
+            <span class="flex items-center gap-2">
+              <span class="text-text-secondary text-sm">Equipment Slot</span>
+            </span>
+            <svg data-collapsible-target="icon" class="collapsible-icon w-4 h-4 text-text-muted flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div data-collapsible-target="content" class="collapsible-content">
+            <div class="stat-filter-box flex flex-col gap-1 p-2 bg-dark-surface rounded border border-dark-border">
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="slot[]" value="1"
+                         >
+                  <span class="text-xs text-text-muted">
+                    Head
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="slot[]" value="2"
+                         >
+                  <span class="text-xs text-text-muted">
+                    Necklace
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="slot[]" value="3"
+                         >
+                  <span class="text-xs text-text-muted">
+                    Chest
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="slot[]" value="4"
+                         >
+                  <span class="text-xs text-text-muted">
+                    Waist
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="slot[]" value="5"
+                         >
+                  <span class="text-xs text-text-muted">
+                    Legs
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="slot[]" value="6"
+                         >
+                  <span class="text-xs text-text-muted">
+                    Feet
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="slot[]" value="7"
+                         >
+                  <span class="text-xs text-text-muted">
+                    Hands
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="slot[]" value="8"
+                         >
+                  <span class="text-xs text-text-muted">
+                    Ring
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="slot[]" value="9"
+                         >
+                  <span class="text-xs text-text-muted">
+                    Main Hand
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="slot[]" value="10"
+                         >
+                  <span class="text-xs text-text-muted">
+                    Off Hand
+                  </span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer hover:bg-dark-bg/50 rounded px-2 py-1.5 my-0.5">
+                  <input type="checkbox" name="slot[]" value="11"
+                         >
+                  <span class="text-xs text-text-muted">
+                    Ranged
+                  </span>
+                </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-4" data-controller="collapsible" data-collapsible-key-value="trade-price">
+          <button type="button" class="flex items-center justify-between w-full cursor-pointer mb-2" data-action="click->collapsible#toggle">
+            <span class="text-text-secondary text-sm">Price (gold)</span>
+            <svg data-collapsible-target="icon" class="collapsible-icon w-4 h-4 text-text-muted flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div data-collapsible-target="content" class="collapsible-content">
+            <div class="flex gap-2">
+              <input value="" class="input-field w-full text-sm" placeholder="Min" min="0" type="number" name="min_price" id="min_price" />
+              <input value="" class="input-field w-full text-sm" placeholder="Max" min="0" type="number" name="max_price" id="max_price" />
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-text-secondary text-sm mb-1">Sort By</label>
+          <select class="input-field w-full" name="sort" id="sort"><option selected="selected" value="newest">Newest</option>
+<option value="price_asc">Price: Low to High</option>
+<option value="price_desc">Price: High to Low</option>
+<option value="expiring">Expiring Soon</option>
+<option value="level_desc">Level: High to Low</option></select>
+        </div>
+
+          <div class="mb-4">
+            <label class="flex items-center gap-2 cursor-pointer">
+              <input type="checkbox" name="mine" value="1" >
+              <span class="text-sm text-text-secondary">Show only my listings</span>
+            </label>
+          </div>
+
+        <div class="flex gap-2">
+          <input type="submit" name="commit" value="Apply" class="btn-primary flex-1" data-disable-with="Apply" />
+          <a class="btn-secondary flex-1 text-center" href="/trade">Reset</a>
+        </div>
+</form>    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="flex-1">
+    <!-- New listings notification banner -->
+    <div data-trade-refresh-target="banner"
+         class="hidden mb-4 p-3 bg-gold/10 border border-gold/30 rounded-lg cursor-pointer hover:bg-gold/20 transition-colors"
+         data-action="click->trade-refresh#refresh">
+      <div class="flex items-center justify-center gap-2 text-gold">
+        <svg class="w-4 h-4 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+        </svg>
+        <span data-trade-refresh-target="count">New listings</span>
+        <span class="text-sm">— click to refresh</span>
+      </div>
+    </div>
+
+        <div class="card p-4 mb-6">
+  <h2 class="font-cinzel text-lg text-gold mb-4">Create Listing</h2>
+
+  <form action="/trade" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="XUlrpp--DQQpDFFQR5GRiRdrSs0nAZ8N9rbJ5lMckWM8rfb3L49L4BevLOrcwn0Gc5stlursZcQpcPBLMbSF7w" autocomplete="off" />
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <!-- Item Selection with Autocomplete -->
+      <div class="md:col-span-2" data-controller="trade-autocomplete">
+        <label class="block text-text-secondary text-sm mb-1">Item</label>
+        <div class="relative">
+          <input type="text"
+                 data-trade-autocomplete-target="input"
+                 data-action="input->trade-autocomplete#search keydown->trade-autocomplete#onKeydown blur->trade-autocomplete#onBlur"
+                 class="input-field w-full"
+                 placeholder="Search items... (e.g., 'Holy Choker of the Bear')"
+                 autocomplete="off">
+          <input data-trade-autocomplete-target="itemId" autocomplete="off" type="hidden" name="trade_listing[item_id]" id="trade_listing_item_id" />
+          <input data-trade-autocomplete-target="affixId" autocomplete="off" type="hidden" name="trade_listing[affix_id]" id="trade_listing_affix_id" />
+          <input data-trade-autocomplete-target="quality" autocomplete="off" type="hidden" name="trade_listing[quality]" id="trade_listing_quality" />
+
+          <!-- Selected item display -->
+          <div data-trade-autocomplete-target="selected" class="hidden mt-2 p-2 bg-dark-surface rounded border border-dark-border">
+            <div class="flex items-center gap-2">
+              <img data-trade-autocomplete-target="selectedIcon" src="" class="w-8 h-8 rounded">
+              <span data-trade-autocomplete-target="selectedName" class="font-medium truncate"></span>
+              <button type="button" data-action="click->trade-autocomplete#clear" class="ml-auto text-text-muted hover:text-red-400 text-xl leading-none flex-shrink-0">&times;</button>
+            </div>
+          </div>
+
+          <!-- Autocomplete results -->
+          <div data-trade-autocomplete-target="results"
+               class="absolute z-50 w-full mt-1 bg-dark-surface border border-dark-border rounded-lg shadow-lg hidden max-h-64 overflow-y-auto">
+          </div>
+        </div>
+        <p class="text-xs text-text-muted mt-1">Type base item name or full generated name like "Holy Choker of the Bear"</p>
+      </div>
+
+      <!-- Item Level -->
+      <div>
+        <label class="block text-text-secondary text-sm mb-1">Item Level</label>
+        <input class="input-field w-full" min="1" max="25" placeholder="1-25" type="number" name="trade_listing[item_level]" id="trade_listing_item_level" />
+      </div>
+
+      <!-- Gold Price -->
+      <div>
+        <label class="block text-text-secondary text-sm mb-1">Price (gold)</label>
+        <input class="input-field w-full" min="1" placeholder="Amount" type="number" name="trade_listing[gold_price]" id="trade_listing_gold_price" />
+      </div>
+    </div>
+
+    <div class="mt-4 flex items-center justify-between">
+      <p class="text-xs text-text-muted">Listings expire after 24 hours. Max 25 active listings.</p>
+      <div class="flex gap-2">
+        <a class="btn-secondary" href="/trade/my_listings">My Listings</a>
+        <input type="submit" name="commit" value="Create Listing" class="btn-primary" data-disable-with="Create Listing" />
+      </div>
+    </div>
+</form></div>
+
+
+    <div class="flex items-center justify-between mb-4">
+      <h1 class="font-cinzel text-2xl text-gold">Trade Listings</h1>
+      <span class="text-text-muted text-sm">3251 listings</span>
+    </div>
+    <div class="flex gap-2 text-gold/80 text-xs mb-6 px-4 py-3 border border-gold/30 rounded bg-gold/5">
+      <svg class="w-4 h-4 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+      </svg>
+      <div>
+        <p>Known Issue: Item stat calculations are a work in progress and may not match in-game values exactly.</p>
+        <p class="mt-1">Known Issue: Material is not being considered yet. Currently working on it.</p>
+      </div>
+    </div>
+
+      <div class="space-y-2">
+          <div class="entity-card" id="listing-13158">
+  <!-- Item Icon -->
+  <div class="entity-icon border-2 quality-legendary-border">
+    <img class="w-full h-full object-cover" alt="Godly Breastplate of the Dispatching Lion" loading="lazy" src="/game_assets/icons/items/icon_item_pl_torso_c01.png" />
+  </div>
+
+  <!-- Item Info -->
+  <div class="flex-1 min-w-0">
+    <a class="block" href="/trade/13158">
+      <h3 class="font-medium quality-legendary truncate hover:underline">
+        Godly Breastplate of the Dispatching Lion
+      </h3>
+</a>    <p class="text-text-muted text-sm">
+      iLvl 25
+          <span class="text-red-500 ml-1">+9 Wpn Dmg</span>
+          <span class="text-orange-400 ml-1">+58 STR</span>
+          <span class="text-yellow-400 ml-1">+58 COU</span>
+      <span class="mx-1">&bull;</span>
+      by <span class="text-text-secondary">huge9991</span>
+    </p>
+  </div>
+
+  <!-- Price & Time -->
+  <div class="text-right flex-shrink-0">
+    <div class="text-gold font-medium">1,800,000g</div>
+    <div class="text-text-muted text-xs">
+      1 day left
+    </div>
+  </div>
+
+  <!-- Delete button (owner only) -->
+</div>
+
+          <div class="entity-card" id="listing-13157">
+  <!-- Item Icon -->
+  <div class="entity-icon border-2 quality-epic-border">
+    <img class="w-full h-full object-cover" alt="Holy Handwraps of the Volcanic Squid" loading="lazy" src="/game_assets/icons/items/icon_item_rb_glove_c01.png" />
+  </div>
+
+  <!-- Item Info -->
+  <div class="flex-1 min-w-0">
+    <a class="block" href="/trade/13157">
+      <h3 class="font-medium quality-epic truncate hover:underline">
+        Holy Handwraps of the Volcanic Squid
+      </h3>
+</a>    <p class="text-text-muted text-sm">
+      iLvl 25
+          <span class="text-orange-500 ml-1">+94 Fire Res</span>
+          <span class="text-cyan-400 ml-1">+34 INT</span>
+          <span class="text-yellow-400 ml-1">+34 COU</span>
+      <span class="mx-1">&bull;</span>
+      by <span class="text-text-secondary">Zilvinas</span>
+    </p>
+  </div>
+
+  <!-- Price & Time -->
+  <div class="text-right flex-shrink-0">
+    <div class="text-gold font-medium">29,999g</div>
+    <div class="text-text-muted text-xs">
+      about 24 hours left
+    </div>
+  </div>
+
+  <!-- Delete button (owner only) -->
+</div>
+
+          <div class="entity-card" id="listing-13156">
+  <!-- Item Icon -->
+  <div class="entity-icon border-2 quality-epic-border">
+    <img class="w-full h-full object-cover" alt="Holy Handwraps of the Diabolic Squid" loading="lazy" src="/game_assets/icons/items/icon_item_rb_glove_c01.png" />
+  </div>
+
+  <!-- Item Info -->
+  <div class="flex-1 min-w-0">
+    <a class="block" href="/trade/13156">
+      <h3 class="font-medium quality-epic truncate hover:underline">
+        Holy Handwraps of the Diabolic Squid
+      </h3>
+</a>    <p class="text-text-muted text-sm">
+      iLvl 25
+          <span class="text-amber-400 ml-1">+31 Spell Crit</span>
+          <span class="text-cyan-400 ml-1">+34 INT</span>
+          <span class="text-yellow-400 ml-1">+34 COU</span>
+      <span class="mx-1">&bull;</span>
+      by <span class="text-text-secondary">caducao</span>
+    </p>
+  </div>
+
+  <!-- Price & Time -->
+  <div class="text-right flex-shrink-0">
+    <div class="text-gold font-medium">200,000g</div>
+    <div class="text-text-muted text-xs">
+      about 24 hours left
+    </div>
+  </div>
+
+  <!-- Delete button (owner only) -->
+</div>
+
+          <div class="entity-card" id="listing-13153">
+  <!-- Item Icon -->
+  <div class="entity-icon border-2 quality-epic-border">
+    <img class="w-full h-full object-cover" alt="Holy Grips of the Abundant Valor" loading="lazy" src="/game_assets/icons/items/icon_item_ch_glove_c01.png" />
+  </div>
+
+  <!-- Item Info -->
+  <div class="flex-1 min-w-0">
+    <a class="block" href="/trade/13153">
+      <h3 class="font-medium quality-epic truncate hover:underline">
+        Holy Grips of the Abundant Valor
+      </h3>
+</a>    <p class="text-text-muted text-sm">
+      iLvl 25
+          <span class="text-red-400 ml-1">+157 HP</span>
+          <span class="text-blue-400 ml-1">+157 Mana</span>
+          <span class="text-yellow-400 ml-1">+31 COU</span>
+      <span class="mx-1">&bull;</span>
+      by <span class="text-text-secondary">grapebox</span>
+    </p>
+  </div>
+
+  <!-- Price & Time -->
+  <div class="text-right flex-shrink-0">
+    <div class="text-gold font-medium">30,000g</div>
+    <div class="text-text-muted text-xs">
+      about 24 hours left
+    </div>
+  </div>
+
+  <!-- Delete button (owner only) -->
+</div>
+
+          <div class="entity-card" id="listing-13152">
+  <!-- Item Icon -->
+  <div class="entity-icon border-2 quality-epic-border">
+    <img class="w-full h-full object-cover" alt="Holy Sash of the Beguiling Snake" loading="lazy" src="/game_assets/icons/items/icon_item_belt_e01.png" />
+  </div>
+
+  <!-- Item Info -->
+  <div class="flex-1 min-w-0">
+    <a class="block" href="/trade/13152">
+      <h3 class="font-medium quality-epic truncate hover:underline">
+        Holy Sash of the Beguiling Snake
+      </h3>
+</a>    <p class="text-text-muted text-sm">
+      iLvl 25
+          <span class="text-[#db80fd] ml-1">+9 Wands</span>
+          <span class="text-green-400 ml-1">+26 AGI</span>
+          <span class="text-purple-400 ml-1">+26 WIL</span>
+      <span class="mx-1">&bull;</span>
+      by <span class="text-text-secondary">Tosva</span>
+    </p>
+  </div>
+
+  <!-- Price & Time -->
+  <div class="text-right flex-shrink-0">
+    <div class="text-gold font-medium">60,000g</div>
+    <div class="text-text-muted text-xs">
+      about 24 hours left
+    </div>
+  </div>
+
+  <!-- Delete button (owner only) -->
+</div>
+
+          <div class="entity-card" id="listing-13150">
+  <!-- Item Icon -->
+  <div class="entity-icon border-2 quality-epic-border">
+    <img class="w-full h-full object-cover" alt="Holy Mace of the Defiant Squid" loading="lazy" src="/game_assets/icons/items/icon_item_mace_c01.png" />
+  </div>
+
+  <!-- Item Info -->
+  <div class="flex-1 min-w-0">
+    <a class="block" href="/trade/13150">
+      <h3 class="font-medium quality-epic truncate hover:underline">
+        Holy Mace of the Defiant Squid
+      </h3>
+</a>    <p class="text-text-muted text-sm">
+      iLvl 25
+          <span class="text-zinc-400 ml-1">+18 Shields</span>
+          <span class="text-cyan-400 ml-1">+52 INT</span>
+          <span class="text-yellow-400 ml-1">+52 COU</span>
+      <span class="mx-1">&bull;</span>
+      by <span class="text-text-secondary">Fracwell</span>
+    </p>
+  </div>
+
+  <!-- Price & Time -->
+  <div class="text-right flex-shrink-0">
+    <div class="text-gold font-medium">50,000g</div>
+    <div class="text-text-muted text-xs">
+      about 24 hours left
+    </div>
+  </div>
+
+  <!-- Delete button (owner only) -->
+</div>
+
+          <div class="entity-card" id="listing-13149">
+  <!-- Item Icon -->
+  <div class="entity-icon border-2 quality-epic-border">
+    <img class="w-full h-full object-cover" alt="Holy Barricade of the Armored Lion" loading="lazy" src="/game_assets/icons/items/icon_item_shield_c01.png" />
+  </div>
+
+  <!-- Item Info -->
+  <div class="flex-1 min-w-0">
+    <a class="block" href="/trade/13149">
+      <h3 class="font-medium quality-epic truncate hover:underline">
+        Holy Barricade of the Armored Lion
+      </h3>
+</a>    <p class="text-text-muted text-sm">
+      iLvl 24
+          <span class="text-zinc-400 ml-1">+10 Shields</span>
+          <span class="text-orange-400 ml-1">+30 STR</span>
+          <span class="text-yellow-400 ml-1">+30 COU</span>
+      <span class="mx-1">&bull;</span>
+      by <span class="text-text-secondary">vinhya</span>
+    </p>
+  </div>
+
+  <!-- Price & Time -->
+  <div class="text-right flex-shrink-0">
+    <div class="text-gold font-medium">25,000g</div>
+    <div class="text-text-muted text-xs">
+      about 24 hours left
+    </div>
+  </div>
+
+  <!-- Delete button (owner only) -->
+</div>
+
+          <div class="entity-card" id="listing-13148">
+  <!-- Item Icon -->
+  <div class="entity-icon border-2 quality-epic-border">
+    <img class="w-full h-full object-cover" alt="Holy Greaves of the Scorching Gibbon" loading="lazy" src="/game_assets/icons/items/icon_item_ch_shoes_c01.png" />
+  </div>
+
+  <!-- Item Info -->
+  <div class="flex-1 min-w-0">
+    <a class="block" href="/trade/13148">
+      <h3 class="font-medium quality-epic truncate hover:underline">
+        Holy Greaves of the Scorching Gibbon
+      </h3>
+</a>    <p class="text-text-muted text-sm">
+      iLvl 25
+          <span class="text-orange-500 ml-1">+86 Fire Res</span>
+          <span class="text-orange-400 ml-1">+31 STR</span>
+          <span class="text-green-400 ml-1">+31 AGI</span>
+      <span class="mx-1">&bull;</span>
+      by <span class="text-text-secondary">dusia</span>
+    </p>
+  </div>
+
+  <!-- Price & Time -->
+  <div class="text-right flex-shrink-0">
+    <div class="text-gold font-medium">30,000g</div>
+    <div class="text-text-muted text-xs">
+      about 24 hours left
+    </div>
+  </div>
+
+  <!-- Delete button (owner only) -->
+</div>
+
+          <div class="entity-card" id="listing-13147">
+  <!-- Item Icon -->
+  <div class="entity-icon border-2 quality-epic-border">
+    <img class="w-full h-full object-cover" alt="Holy Handwraps of the Blinding Goat" loading="lazy" src="/game_assets/icons/items/icon_item_rb_glove_c01.png" />
+  </div>
+
+  <!-- Item Info -->
+  <div class="flex-1 min-w-0">
+    <a class="block" href="/trade/13147">
+      <h3 class="font-medium quality-epic truncate hover:underline">
+        Holy Handwraps of the Blinding Goat
+      </h3>
+</a>    <p class="text-text-muted text-sm">
+      iLvl 25
+          <span class="text-yellow-300 ml-1">+86 Holy Res</span>
+          <span class="text-cyan-400 ml-1">+31 INT</span>
+          <span class="text-yellow-400 ml-1">+31 COU</span>
+      <span class="mx-1">&bull;</span>
+      by <span class="text-text-secondary">Flloyd</span>
+    </p>
+  </div>
+
+  <!-- Price & Time -->
+  <div class="text-right flex-shrink-0">
+    <div class="text-gold font-medium">25,000g</div>
+    <div class="text-text-muted text-xs">
+      about 24 hours left
+    </div>
+  </div>
+
+  <!-- Delete button (owner only) -->
+</div>
+
+          <div class="entity-card" id="listing-13146">
+  <!-- Item Icon -->
+  <div class="entity-icon border-2 quality-epic-border">
+    <img class="w-full h-full object-cover" alt="Holy Staff of the Concentrating Dolphin" loading="lazy" src="/game_assets/icons/items/icon_item_staff_e01.png" />
+  </div>
+
+  <!-- Item Info -->
+  <div class="flex-1 min-w-0">
+    <a class="block" href="/trade/13146">
+      <h3 class="font-medium quality-epic truncate hover:underline">
+        Holy Staff of the Concentrating Dolphin
+      </h3>
+</a>    <p class="text-text-muted text-sm">
+      iLvl 25
+          <span class="text-indigo-400 ml-1">+26 Meditate</span>
+          <span class="text-purple-400 ml-1">+52 WIL</span>
+          <span class="text-cyan-400 ml-1">+52 INT</span>
+      <span class="mx-1">&bull;</span>
+      by <span class="text-text-secondary">Sonata</span>
+    </p>
+  </div>
+
+  <!-- Price & Time -->
+  <div class="text-right flex-shrink-0">
+    <div class="text-gold font-medium">50,000g</div>
+    <div class="text-text-muted text-xs">
+      about 24 hours left
+    </div>
+  </div>
+
+  <!-- Delete button (owner only) -->
+</div>
+
+          <div class="entity-card" id="listing-13145">
+  <!-- Item Icon -->
+  <div class="entity-icon border-2 quality-epic-border">
+    <img class="w-full h-full object-cover" alt="Holy Barricade of the Scorching Otter" loading="lazy" src="/game_assets/icons/items/icon_item_shield_c01.png" />
+  </div>
+
+  <!-- Item Info -->
+  <div class="flex-1 min-w-0">
+    <a class="block" href="/trade/13145">
+      <h3 class="font-medium quality-epic truncate hover:underline">
+        Holy Barricade of the Scorching Otter
+      </h3>
+</a>    <p class="text-text-muted text-sm">
+      iLvl 25
+          <span class="text-orange-500 ml-1">+86 Fire Res</span>
+          <span class="text-purple-400 ml-1">+31 WIL</span>
+          <span class="text-cyan-400 ml-1">+31 INT</span>
+      <span class="mx-1">&bull;</span>
+      by <span class="text-text-secondary">Fracwell</span>
+    </p>
+  </div>
+
+  <!-- Price & Time -->
+  <div class="text-right flex-shrink-0">
+    <div class="text-gold font-medium">100,000g</div>
+    <div class="text-text-muted text-xs">
+      about 24 hours left
+    </div>
+  </div>
+
+  <!-- Delete button (owner only) -->
+</div>
+
+          <div class="entity-card" id="listing-13144">
+  <!-- Item Icon -->
+  <div class="entity-icon border-2 quality-epic-border">
+    <img class="w-full h-full object-cover" alt="Holy Hood of the Divine Squid" loading="lazy" src="/game_assets/icons/items/icon_item_rb_head_c01a.png" />
+  </div>
+
+  <!-- Item Info -->
+  <div class="flex-1 min-w-0">
+    <a class="block" href="/trade/13144">
+      <h3 class="font-medium quality-epic truncate hover:underline">
+        Holy Hood of the Divine Squid
+      </h3>
+</a>    <p class="text-text-muted text-sm">
+      iLvl 25
+          <span class="text-yellow-300 ml-1">+94 Holy Res</span>
+          <span class="text-cyan-400 ml-1">+34 INT</span>
+          <span class="text-yellow-400 ml-1">+34 COU</span>
+      <span class="mx-1">&bull;</span>
+      by <span class="text-text-secondary">Tosva</span>
+    </p>
+  </div>
+
+  <!-- Price & Time -->
+  <div class="text-right flex-shrink-0">
+    <div class="text-gold font-medium">150,000g</div>
+    <div class="text-text-muted text-xs">
+      about 24 hours left
+    </div>
+  </div>
+
+  <!-- Delete button (owner only) -->
+</div>
+
+          <div class="entity-card" id="listing-13143">
+  <!-- Item Icon -->
+  <div class="entity-icon border-2 quality-legendary-border">
+    <img class="w-full h-full object-cover" alt="Godly Barricade of the Armored Otter" loading="lazy" src="/game_assets/icons/items/icon_item_shield_c01.png" />
+  </div>
+
+  <!-- Item Info -->
+  <div class="flex-1 min-w-0">
+    <a class="block" href="/trade/13143">
+      <h3 class="font-medium quality-legendary truncate hover:underline">
+        Godly Barricade of the Armored Otter
+      </h3>
+</a>    <p class="text-text-muted text-sm">
+      iLvl 25
+          <span class="text-zinc-400 ml-1">+13 Shields</span>
+          <span class="text-purple-400 ml-1">+38 WIL</span>
+          <span class="text-cyan-400 ml-1">+38 INT</span>
+      <span class="mx-1">&bull;</span>
+      by <span class="text-text-secondary">Chowsky</span>
+    </p>
+  </div>
+
+  <!-- Price & Time -->
+  <div class="text-right flex-shrink-0">
+    <div class="text-gold font-medium">1,000,000g</div>
+    <div class="text-text-muted text-xs">
+      about 24 hours left
+    </div>
+  </div>
+
+  <!-- Delete button (owner only) -->
+</div>
+
+          <div class="entity-card" id="listing-13142">
+  <!-- Item Icon -->
+  <div class="entity-icon border-2 quality-epic-border">
+    <img class="w-full h-full object-cover" alt="Holy Barricade of the Chaotic Horse" loading="lazy" src="/game_assets/icons/items/icon_item_shield_c01.png" />
+  </div>
+
+  <!-- Item Info -->
+  <div class="flex-1 min-w-0">
+    <a class="block" href="/trade/13142">
+      <h3 class="font-medium quality-epic truncate hover:underline">
+        Holy Barricade of the Chaotic Horse
+      </h3>
+</a>    <p class="text-text-muted text-sm">
+      iLvl 25
+          <span class="text-violet-500 ml-1">+94 Shadow Res</span>
+          <span class="text-purple-400 ml-1">+34 WIL</span>
+          <span class="text-yellow-400 ml-1">+34 COU</span>
+      <span class="mx-1">&bull;</span>
+      by <span class="text-text-secondary">grapebox</span>
+    </p>
+  </div>
+
+  <!-- Price & Time -->
+  <div class="text-right flex-shrink-0">
+    <div class="text-gold font-medium">30,000g</div>
+    <div class="text-text-muted text-xs">
+      about 24 hours left
+    </div>
+  </div>
+
+  <!-- Delete button (owner only) -->
+</div>
+
+          <div class="entity-card" id="listing-13141">
+  <!-- Item Icon -->
+  <div class="entity-icon border-2 quality-epic-border">
+    <img class="w-full h-full object-cover" alt="Holy Sash of the Rupturing Whale" loading="lazy" src="/game_assets/icons/items/icon_item_belt_e01.png" />
+  </div>
+
+  <!-- Item Info -->
+  <div class="flex-1 min-w-0">
+    <a class="block" href="/trade/13141">
+      <h3 class="font-medium quality-epic truncate hover:underline">
+        Holy Sash of the Rupturing Whale
+      </h3>
+</a>    <p class="text-text-muted text-sm">
+      iLvl 25
+          <span class="text-rose-400 ml-1">+9 Axes</span>
+          <span class="text-orange-400 ml-1">+26 STR</span>
+          <span class="text-purple-400 ml-1">+26 WIL</span>
+      <span class="mx-1">&bull;</span>
+      by <span class="text-text-secondary">Fracwell</span>
+    </p>
+  </div>
+
+  <!-- Price & Time -->
+  <div class="text-right flex-shrink-0">
+    <div class="text-gold font-medium">50,000g</div>
+    <div class="text-text-muted text-xs">
+      about 24 hours left
+    </div>
+  </div>
+
+  <!-- Delete button (owner only) -->
+</div>
+
+          <div class="entity-card" id="listing-13140">
+  <!-- Item Icon -->
+  <div class="entity-icon border-2 quality-epic-border">
+    <img class="w-full h-full object-cover" alt="Holy Ring of the Ravaging Horse" loading="lazy" src="/game_assets/icons/items/icon_item_ring_c02.png" />
+  </div>
+
+  <!-- Item Info -->
+  <div class="flex-1 min-w-0">
+    <a class="block" href="/trade/13140">
+      <h3 class="font-medium quality-epic truncate hover:underline">
+        Holy Ring of the Ravaging Horse
+      </h3>
+</a>    <p class="text-text-muted text-sm">
+      iLvl 25
+          <span class="text-amber-400 ml-1">+24 Melee Crit</span>
+          <span class="text-purple-400 ml-1">+26 WIL</span>
+          <span class="text-yellow-400 ml-1">+26 COU</span>
+      <span class="mx-1">&bull;</span>
+      by <span class="text-text-secondary">Flloyd</span>
+    </p>
+  </div>
+
+  <!-- Price & Time -->
+  <div class="text-right flex-shrink-0">
+    <div class="text-gold font-medium">15,000g</div>
+    <div class="text-text-muted text-xs">
+      about 24 hours left
+    </div>
+  </div>
+
+  <!-- Delete button (owner only) -->
+</div>
+
+          <div class="entity-card" id="listing-13139">
+  <!-- Item Icon -->
+  <div class="entity-icon border-2 quality-legendary-border">
+    <img class="w-full h-full object-cover" alt="Godly Pendant of the Tempting Pig" loading="lazy" src="/game_assets/icons/items/icon_item_necklace_m01.png" />
+  </div>
+
+  <!-- Item Info -->
+  <div class="flex-1 min-w-0">
+    <a class="block" href="/trade/13139">
+      <h3 class="font-medium quality-legendary truncate hover:underline">
+        Godly Pendant of the Tempting Pig
+      </h3>
+</a>    <p class="text-text-muted text-sm">
+      iLvl 25
+          <span class="text-[#db80fd] ml-1">+10 Wands</span>
+          <span class="text-orange-400 ml-1">+29 STR</span>
+          <span class="text-cyan-400 ml-1">+29 INT</span>
+      <span class="mx-1">&bull;</span>
+      by <span class="text-text-secondary">urbay</span>
+    </p>
+  </div>
+
+  <!-- Price & Time -->
+  <div class="text-right flex-shrink-0">
+    <div class="text-gold font-medium">150,000g</div>
+    <div class="text-text-muted text-xs">
+      about 24 hours left
+    </div>
+  </div>
+
+  <!-- Delete button (owner only) -->
+</div>
+
+          <div class="entity-card" id="listing-13138">
+  <!-- Item Icon -->
+  <div class="entity-icon border-2 quality-epic-border">
+    <img class="w-full h-full object-cover" alt="Holy Choker of the Severing Goat" loading="lazy" src="/game_assets/icons/items/icon_item_necklace_e01.png" />
+  </div>
+
+  <!-- Item Info -->
+  <div class="flex-1 min-w-0">
+    <a class="block" href="/trade/13138">
+      <h3 class="font-medium quality-epic truncate hover:underline">
+        Holy Choker of the Severing Goat
+      </h3>
+</a>    <p class="text-text-muted text-sm">
+      iLvl 25
+          <span class="text-rose-400 ml-1">+8 Axes</span>
+          <span class="text-cyan-400 ml-1">+24 INT</span>
+          <span class="text-yellow-400 ml-1">+24 COU</span>
+      <span class="mx-1">&bull;</span>
+      by <span class="text-text-secondary">Fracwell</span>
+    </p>
+  </div>
+
+  <!-- Price & Time -->
+  <div class="text-right flex-shrink-0">
+    <div class="text-gold font-medium">50,000g</div>
+    <div class="text-text-muted text-xs">
+      about 24 hours left
+    </div>
+  </div>
+
+  <!-- Delete button (owner only) -->
+</div>
+
+          <div class="entity-card" id="listing-13137">
+  <!-- Item Icon -->
+  <div class="entity-icon border-2 quality-epic-border">
+    <img class="w-full h-full object-cover" alt="Holy Vestments of the Twisted Otter" loading="lazy" src="/game_assets/icons/items/icon_item_rb_torso_c01.png" />
+  </div>
+
+  <!-- Item Info -->
+  <div class="flex-1 min-w-0">
+    <a class="block" href="/trade/13137">
+      <h3 class="font-medium quality-epic truncate hover:underline">
+        Holy Vestments of the Twisted Otter
+      </h3>
+</a>    <p class="text-text-muted text-sm">
+      iLvl 25
+          <span class="text-violet-500 ml-1">+133 Shadow Res</span>
+          <span class="text-purple-400 ml-1">+48 WIL</span>
+          <span class="text-cyan-400 ml-1">+48 INT</span>
+      <span class="mx-1">&bull;</span>
+      by <span class="text-text-secondary">Tosva</span>
+    </p>
+  </div>
+
+  <!-- Price & Time -->
+  <div class="text-right flex-shrink-0">
+    <div class="text-gold font-medium">250,000g</div>
+    <div class="text-text-muted text-xs">
+      about 24 hours left
+    </div>
+  </div>
+
+  <!-- Delete button (owner only) -->
+</div>
+
+          <div class="entity-card" id="listing-13136">
+  <!-- Item Icon -->
+  <div class="entity-icon border-2 quality-epic-border">
+    <img class="w-full h-full object-cover" alt="Holy Dragonslayer of the Contemplative Eagle" loading="lazy" src="/game_assets/icons/items/icon_item_bow_deva65a.png" />
+  </div>
+
+  <!-- Item Info -->
+  <div class="flex-1 min-w-0">
+    <a class="block" href="/trade/13136">
+      <h3 class="font-medium quality-epic truncate hover:underline">
+        Holy Dragonslayer of the Contemplative Eagle
+      </h3>
+</a>    <p class="text-text-muted text-sm">
+      iLvl 25
+          <span class="text-indigo-400 ml-1">+22 Meditate</span>
+          <span class="text-orange-400 ml-1">+44 STR</span>
+          <span class="text-yellow-400 ml-1">+44 COU</span>
+      <span class="mx-1">&bull;</span>
+      by <span class="text-text-secondary">mormox</span>
+    </p>
+  </div>
+
+  <!-- Price & Time -->
+  <div class="text-right flex-shrink-0">
+    <div class="text-gold font-medium">170,000g</div>
+    <div class="text-text-muted text-xs">
+      about 24 hours left
+    </div>
+  </div>
+
+  <!-- Delete button (owner only) -->
+</div>
+
+      </div>
+
+      <div class="mt-8 flex justify-center">
+        <nav class="pagy nav" aria-label="Pages"><a role="link" aria-disabled="true" aria-label="Previous">&lt;</a><a role="link" aria-disabled="true" aria-current="page" class="current">1</a><a href="/trade?q=&quality%5B%5D=5&quality%5B%5D=6&min_level=24&max_level=&min_price=&max_price=&sort=newest&commit=Apply&page=2">2</a><a href="/trade?q=&quality%5B%5D=5&quality%5B%5D=6&min_level=24&max_level=&min_price=&max_price=&sort=newest&commit=Apply&page=3">3</a><a href="/trade?q=&quality%5B%5D=5&quality%5B%5D=6&min_level=24&max_level=&min_price=&max_price=&sort=newest&commit=Apply&page=4">4</a><a href="/trade?q=&quality%5B%5D=5&quality%5B%5D=6&min_level=24&max_level=&min_price=&max_price=&sort=newest&commit=Apply&page=5">5</a><a role="link" aria-disabled="true" class="gap">&hellip;</a><a href="/trade?q=&quality%5B%5D=5&quality%5B%5D=6&min_level=24&max_level=&min_price=&max_price=&sort=newest&commit=Apply&page=163">163</a><a href="/trade?q=&quality%5B%5D=5&quality%5B%5D=6&min_level=24&max_level=&min_price=&max_price=&sort=newest&commit=Apply&page=2" aria-label="Next">&gt;</a></nav>
+      </div>
+  </div>
+</div>
+
+    </main>
+
+    <footer class="bg-dark-surface border-t border-dark-border mt-auto">
+  <div class="container mx-auto px-4 py-8 max-w-7xl">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <!-- About -->
+      <div class="md:col-span-2">
+        <h3 class="font-cinzel text-lg text-gold mb-4">DreadmystDB</h3>
+        <p class="text-text-secondary text-sm leading-relaxed">
+          The comprehensive database for Dreadmyst. Find items, NPCs, spells, quests,
+          and share your character builds with the community.
+        </p>
+        <p class="text-text-muted text-xs mt-4">
+          Game assets and data are property of the Dreadmyst developers.
+          Used with permission.
+        </p>
+      </div>
+
+      <!-- Database Links -->
+      <div>
+        <h4 class="font-cinzel text-sm text-gold mb-4">Database</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a class="text-text-secondary hover:text-gold" href="/database/items">Items</a></li>
+          <li><a class="text-text-secondary hover:text-gold" href="/database/npcs">NPCs</a></li>
+          <li><a class="text-text-secondary hover:text-gold" href="/database/spells">Spells</a></li>
+          <li><a class="text-text-secondary hover:text-gold" href="/database/quests">Quests</a></li>
+          <li><a class="text-text-secondary hover:text-gold" href="/database/dungeons">Dungeons</a></li>
+          <li><a class="text-text-secondary hover:text-gold" href="/database/affixes">Affixes</a></li>
+        </ul>
+      </div>
+
+      <!-- Community Links -->
+      <div>
+        <h4 class="font-cinzel text-sm text-gold mb-4">Community</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a target="_blank" class="text-text-secondary hover:text-gold" href="https://dreadmyst.com">Dreadmyst Official</a></li>
+          <li><a target="_blank" class="text-text-secondary hover:text-gold" href="https://store.steampowered.com/app/4241850/Dreadmyst/">Steam</a></li>
+          <li><a target="_blank" class="text-text-secondary hover:text-gold" href="https://discord.gg/TmHyGKRrVG">Discord</a></li>
+          <li><a target="_blank" class="text-text-secondary hover:text-gold" href="https://docs.google.com/spreadsheets/d/1GxuInbx8yLYp4mnmaHgCMmRkSamrE_cBCYlzvg1pCqM/edit?gid=2094395961#gid=2094395961">Item Spreadsheet</a></li>
+          <li><a target="_blank" class="text-text-secondary hover:text-gold" href="https://thecoderjt.github.io/dreadmyst-enchanting-tool/">Orb Chance Tool</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-dark-border mt-8 pt-8 text-center text-text-muted text-xs">
+      <p>&copy; 2026 DreadmystDB. Not affiliated with the official Dreadmyst team.</p>
+      <p class="mt-2">Issues? Contact @takeaseat on Discord</p>
+    </div>
+  </div>
+</footer>
+
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"9e0b7e5c6b4a41239385a5ff971bf1fe","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
