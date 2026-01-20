@@ -22,6 +22,7 @@ LICENSE_SECRET_KEY = b"dreadmyst_bot_secret_key_2024_secure_v1"
 
 # URL do servidor de validação
 # Servidor em produção: https://dreadbot-d4xc.onrender.com
+# Para desabilitar temporariamente, use: None ou ""
 LICENSE_SERVER_URL = os.environ.get("LICENSE_SERVER_URL", "https://dreadbot-d4xc.onrender.com/validate")
 
 # Timeout para requisições ao servidor (segundos)
@@ -173,6 +174,10 @@ class LicenseManager:
         Returns:
             (is_valid, message) ou None se servidor não disponível
         """
+        # Se a URL do servidor não estiver configurada, retorna None (fallback local)
+        if not self.server_url or self.server_url == "None" or self.server_url == "":
+            return None
+        
         try:
             data = {
                 'license_key': license_key,
