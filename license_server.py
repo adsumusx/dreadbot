@@ -168,6 +168,42 @@ def health():
     """Endpoint de health check"""
     return jsonify({'status': 'ok'}), 200
 
+@app.route('/clear', methods=['POST'])
+def clear_registry():
+    """
+    Limpa o registro de licenças (APENAS PARA DESENVOLVIMENTO/TESTES!)
+    ⚠️ REMOVA este endpoint em produção ou adicione autenticação!
+    """
+    try:
+        if os.path.exists(REGISTRY_FILE):
+            os.remove(REGISTRY_FILE)
+        return jsonify({
+            'status': 'ok',
+            'message': 'Registro limpo com sucesso'
+        }), 200
+    except Exception as e:
+        return jsonify({
+            'status': 'error',
+            'message': str(e)
+        }), 500
+
+@app.route('/stats', methods=['GET'])
+def stats():
+    """Retorna estatísticas do registro"""
+    try:
+        registry = load_registry()
+        # Conta apenas hashes (não as datas)
+        licenses = [k for k in registry.keys() if not k.endswith('_date')]
+        return jsonify({
+            'total_licenses': len(licenses),
+            'licenses': licenses[:10]  # Primeiras 10
+        }), 200
+    except Exception as e:
+        return jsonify({
+            'status': 'error',
+            'message': str(e)
+        }), 500
+
 if __name__ == '__main__':
     # Configurações do servidor
     # Em produção, use um servidor WSGI como gunicorn ou uwsgi

@@ -20,11 +20,9 @@ import urllib.error
 # Em produção, esta chave deve ser diferente e mais segura
 LICENSE_SECRET_KEY = b"dreadmyst_bot_secret_key_2024_secure_v1"
 
-# URL do servidor de validação (configure com sua URL)
-# Exemplo: "https://abc123.ngrok.io/validate" (se usar ngrok)
-# Exemplo: "http://SEU_IP_PUBLICO:5000/validate" (se usar port forwarding)
-# Exemplo: "http://meuservidor.ddns.net:5000/validate" (se usar DNS dinâmico)
-LICENSE_SERVER_URL = os.environ.get("LICENSE_SERVER_URL", "http://localhost:5000/validate")
+# URL do servidor de validação
+# Servidor em produção: https://dreadbot-d4xc.onrender.com
+LICENSE_SERVER_URL = os.environ.get("LICENSE_SERVER_URL", "https://dreadbot-d4xc.onrender.com/validate")
 
 # Timeout para requisições ao servidor (segundos)
 LICENSE_SERVER_TIMEOUT = 10
@@ -192,13 +190,23 @@ class LicenseManager:
             
             with urllib.request.urlopen(req, timeout=LICENSE_SERVER_TIMEOUT) as response:
                 result = json.loads(response.read().decode('utf-8'))
-                return result.get('valid', False), result.get('message', 'Erro desconhecido')
+                is_valid = result.get('valid', False)
+                message = result.get('message', 'Erro desconhecido')
+                
+                # Log para debug (pode remover depois)
+                if not is_valid:
+                    print(f"[DEBUG] Servidor retornou inválido: {message}")
+                
+                return is_valid, message
         
-        except urllib.error.URLError:
+        except urllib.error.URLError as e:
             # Servidor não disponível - retorna None para usar fallback local
+            print(f"[DEBUG] Servidor não disponível: {e}")
             return None
         except Exception as e:
-            print(f"Erro ao verificar licença online: {e}")
+            print(f"[DEBUG] Erro ao verificar licença online: {e}")
+            import traceback
+            traceback.print_exc()
             return None
     
     def load_license_lock(self) -> dict:
@@ -358,8 +366,19 @@ class LicenseManager:
             if online_result is not None:
                 # Servidor online disponível - usa validação online
                 is_valid_online, message_online = online_result
+                # Se o servidor diz que já foi ativada, verifica se é na mesma máquina
                 if not is_valid_online:
-                    return (False, message_online) if not return_activated_key else (False, message_online, None)
+                    # Verifica se a mensagem indica que já foi ativada em OUTRA máquina
+                    if "outra máquina" in message_online.lower() or "another machine" in message_online.lower():
+                        # Já foi ativada em outra máquina - rejeita imediatamente
+                        return (False, message_online) if not return_activated_key else (False, message_online, None)
+                    elif "já foi ativada" in message_online.lower() or "already_activated" in message_online.lower():
+                        # Pode ser a mesma máquina tentando reativar - permite continuar
+                        # O servidor vai verificar novamente na ativação
+                        pass
+                    else:
+                        # Outro tipo de erro - retorna
+                        return (False, message_online) if not return_activated_key else (False, message_online, None)
             
             # Verifica no registro local também (fallback)
             registry = self.load_license_registry()
@@ -420,7 +439,13 @@ class LicenseManager:
                 if online_activate is not None:
                     is_valid_online, message_online = online_activate
                     if not is_valid_online:
+                        # Se o servidor rejeitar, retorna o erro
+                        # Mas verifica se é realmente outra máquina ou erro de servidor
                         error_msg = message_online
+                        # Se a mensagem indica que já foi ativada em outra máquina, rejeita
+                        if "outra máquina" in message_online.lower() or "another machine" in message_online.lower():
+                            return (False, error_msg) if not return_activated_key else (False, error_msg, None)
+                        # Outros erros também rejeitam
                         return (False, error_msg) if not return_activated_key else (False, error_msg, None)
                 
                 # REGISTRA a chave no registro local também (fallback)
